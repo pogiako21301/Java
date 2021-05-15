@@ -1,0 +1,44 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Queue<String> movie = new LinkedList<String>();
+        Queue<String> snack = new LinkedList<>();
+        String str = "";
+        
+        Scanner sc = new Scanner(System.in).useDelimiter("\n");
+        
+        for(int i = 1; i <= 3; i++){
+            System.out.print("Enter movie: " + i + " of 3 " + ": ");
+            str = sc.next();
+            movie.add(str);
+        }
+        for(int x = 1; x <= 3; x++){
+            System.out.print("Enter snack: " + x + " of 3 " + ": ");
+            str = sc.next();
+            snack.add(str);
+        }
+        System.out.println("Movies to watch are: deque" + movie);
+        System.out.println("Snacks available are: deque" + snack);
+        
+        System.out.print("Press S each time to finish a snack: ");
+        
+        Object[] arr = snack.toArray();
+        if (snack != null) {
+	           for (int x = 0; x < arr.length; x++) {
+	           		str = sc.next();
+					snack.remove();
+                    
+                    Object[] checkArr = snack.toArray();
+					if (checkArr.length > 0) {
+						System.out.println("deque" + snack);
+					}
+           		}
+
+           		System.out.print("No more snacks.");
+           	}
+
+    }
+}

@@ -1,0 +1,13 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SortArray {
+    public static void main(String[] args) {
+    	Scanner scan = new Scanner(System.in);
+    	System.out.print("Enter any key: ");
+        String str = scan.nextLine();
+        String[] strArray = str.split(" ");
+        Arrays.sort(strArray);
+        System.out.println("Answer: " + Arrays.toString(strArray));
+    }
+}

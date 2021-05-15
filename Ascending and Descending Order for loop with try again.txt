@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    String tryAgain = "1";
+	    do {
+    	    System.out.print("Enter first number: ");
+            int first = scan.nextInt();
+            System.out.print("Enter second number: ");
+            int last = scan.nextInt();
+            
+            if(first <= last) {
+                for(int i = first; i <= last; i++) {
+                    System.out.println(i);
+                    }
+                }
+            else if(first >= last) {
+                for(int i = first; i >= last; i--) {
+                    System.out.println(i);  
+                    }
+                }
+        System.out.print("Enter 1 to continue, enter any number to end: ");
+        tryAgain = scan.next();
+        if(tryAgain.equals("1")){
+            System.out.println("************************************************");
+            System.out.println("************************************************");
+            System.out.println("************************************************");
+            continue;
+        }
+        else {
+            System.out.println("************************************************");
+            System.out.println("************************************************");
+            System.out.println("Thank you!!");
+            System.out.println("************************************************");
+            System.out.println("************************************************");
+            break;
+        }
+	    }//hatian
+	    while(tryAgain.equals("1"));
+    }
+}

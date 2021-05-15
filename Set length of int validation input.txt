@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+		System.out.print("Enter 6 digit number: ");
+		while(scan.hasNextInt(6) || !scan.hasNextInt(7)) {
+		    System.out.print("Error. Please enter a 6 digit number only: ");
+            scan.next();
+		}
+		int ans = scan.nextInt();
+		int newNum = ans / 10;
+        int lastDigit = ans % 10;
+        System.out.println("Enter 6 digit number: " + ans);
+		System.out.println("I will remove the last digit of your number. \n" + "Your new number is: " + newNum);
+		int total = newNum % 7;
+		System.out.println("Now i will divide your new number to 7. \n" + newNum + " divided by 7 is equal to " + total);
+		System.out.println("We will check if the remainder from dividing " + newNum + " by 7 is equal to the removed number earlier.");
+		System.out.println("The remainder by dividing " + newNum + " by 7 is: " + total + "\nThe removed number is: " + lastDigit);
+		if (total == lastDigit) {
+		    System.out.println("Yes! " + total + " and " + lastDigit + " are equal.");
+		}
+		else {
+		    System.out.println("No! " + total + " and " + lastDigit + " are not equal.");
+		}
+	}
+}

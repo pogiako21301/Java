@@ -1,0 +1,19 @@
+import java.util.*; 
+
+public class Main {  
+    public static void main(String args[]) {  
+        HashMap<String, String> programs = new HashMap<String, String>();
+        programs.put("BSIT", "Bachelor of Science in Information Technology");
+        programs.put("BSCS", "Bachelor of Science in Computer Science");    
+        programs.put("BSIS", "Bachelor of Science in Information System");   
+        
+        if(programs.containsKey("BSIT")) {
+            String x = programs.get("BSIT");
+            System.out.println("BSIT" + " is " + x);
+        }
+        programs.remove("BSIT");
+        if(programs.containsKey("BSCpE")) {
+            
+        }
+    }  
+}  

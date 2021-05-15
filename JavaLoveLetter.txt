@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+abstract class MyLove {
+    abstract void Iloveyou();
+  }
+
+class A extends MyLove {
+    public void Iloveyou(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sometimes the heart sees what is invisible to the eye. \nI will love you forever! \nVictoria Yasmin Santiago Ortega will you be girlfriend? ");
+        String V = sc.nextLine();
+        if(V.equalsIgnoreCase("yes") || V.equalsIgnoreCase("sige") || V.equalsIgnoreCase("oo") || V.equalsIgnoreCase("y") || V.equalsIgnoreCase("e")) {
+            System.out.println("Di nga tayo na? weeeh ulul? De mahal kita kahit anong mangyare.");
+        }
+        else if(V.equalsIgnoreCase("no") || (V.equalsIgnoreCase("ayaw"))){
+            System.out.println("Mahal mo naman ako oks lang yan HAHAHAHAHA, de madami tayong goals kaya dahan dahan lang no? Muah");
+        }
+    }
+}
+class B extends A {
+    public void Iloveyou(){
+        System.out.println("1000011 1100001 1101110 100000 1111001 1101111 1110101 100000 1100010 1100101 100000 1101101 1111001 100000 1100111 1101001 1110010 1101100 1100110 1110010 1101001 1100101 1101110 1100100 111111");
+        System.out.println("Convert mo nalang HAHAHAHAHAHAHAHAHAHAHAHA");
+    }
+}
+class C extends B {
+    public void Iloveyou(){
+        System.out.println("Water your hearts little sprouts instead of your doubts.");
+        System.out.println("- .- -. --. .- / .... .- .... .- .... CONVERT ULETTT");
+        System.out.println(".--- -.- / .-.. .- -. --. / .. / .-.. --- ...- . / -.-- --- ..- ..-");
+               
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        String tryAgain;
+        while(true ){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Choose between A, B, and C\nWhat will you choose? ");
+        String str = sc.nextLine();
+        if(str.equalsIgnoreCase("A")){
+            A b1 = new A();
+            b1.Iloveyou();
+        }
+        else if(str.equalsIgnoreCase("B")){
+            B c1 = new B();
+            c1.Iloveyou();
+        }
+        else if(str.equalsIgnoreCase("C")){
+            C d1 = new C();
+            d1.Iloveyou();
+            }
+        System.out.print("Enter y to continue, enter any key to exit: ");
+        tryAgain = sc.next();
+        if(tryAgain.equalsIgnoreCase("yes") || tryAgain.equalsIgnoreCase("y")) {
+            continue;
+            }
+        else {
+            System.out.println("Thank you for using!");
+            break;
+            } 
+        }
+    }
+}

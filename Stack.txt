@@ -1,0 +1,60 @@
+import java.util.Stack;
+import java.util.Scanner;
+
+    public class Main{
+        public static void main(String[] args){
+            Stack<String> stk = new Stack<>();
+            Stack<String> basket = new Stack<>();
+            String str = "";
+
+            Scanner sc = new Scanner(System.in);
+
+            stk.push("Apple");
+            stk.push("Orange");
+            stk.push("Mango");
+            stk.push("Guava");
+
+            System.out.println("Catch and eat any of there fruits: " + stk);
+
+            System.out.print("How many fruits would you like to catch? ");
+            int n = sc.nextInt();
+            System.out.println("Choose a fruit to catch. Press A, O, M, and G.");
+
+            for(int i = 1; i <= n; i++){
+            	System.out.print("Fruit " + i + " of "  + n + ": ");
+            	str = Integer.toString(i);
+				str = sc.next();
+
+				Object[] arr = stk.toArray();
+
+				for (int x = 0; x < arr.length; x++) {
+					String stkFirstChar = arr[x].toString().substring(0,1).toLowerCase();
+					if (stkFirstChar.contains(str.toLowerCase())) {
+						basket.push(arr[x].toString());
+					}
+				}
+            }
+
+            System.out.println("Your basket now has: " + basket);
+
+           	if (basket != null) {
+           		Object[] arr = basket.toArray();
+
+	           for (int x = 0; x < arr.length; x++) {
+	           		System.out.print("Press E to eat: ");
+	           		str = Integer.toString(x);
+	           		str = sc.next();
+
+					basket.pop();
+
+					Object[] checkArr = basket.toArray();
+
+					if (checkArr.length > 0) {
+						System.out.println("Fruit(s) in the basket: " + basket);
+					}
+           		}
+
+           		System.out.print("No more fruits.");
+           	}
+     }
+}

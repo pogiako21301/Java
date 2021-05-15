@@ -1,0 +1,44 @@
+import java.util.*;
+
+interface FirstInterface {
+    public void firstMethod();
+}
+interface SecondInterface {
+    public void SecondMethod();
+}
+interface ThirdInterface { 
+    public void ThirdMethod();
+}
+
+class DemoClass implements FirstInterface, SecondInterface, ThirdInterface {
+    public void firstMethod() {
+        System.out.println("An account of imaginary or real people and events told for entertainment.");
+    }
+    public void SecondMethod() {
+        System.out.println("The state or fact of continuing to live or exist, typically in spite of an accident, ordeal, or difficult circumstances.");
+    }
+    public void ThirdMethod() {
+        System.out.println("Involving the imagination or original ideas, especially in the production of an artistic work.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        DemoClass myObj = new DemoClass();
+        System.out.print("Enter your name: ");
+        String str = sc.nextLine();
+        System.out.println("Press P to start playing, " + str);
+        System.out.print("Press 1, 2 or 3 to select mode\n1 - Story mode\n2 - Survival\n3 - Creative\nEnter your choice: ");
+        String menu = sc.nextLine();
+        if(menu.equals("1")) {
+            myObj.firstMethod();
+        }
+        else if(menu.equals("2")) {
+            myObj.SecondMethod();
+        }
+        else if(menu.equals("3")) {
+            myObj.ThirdMethod();
+        }
+    }
+}

@@ -1,0 +1,12 @@
+public class Main {
+
+}
+class Cat extends Main {
+	public static void main(String []args) {
+		//Cat c = new Cat(); //UPCASTING
+		//Main a = c;
+		
+		Main a = new Cat(); //DOWNCASTING
+		Cat c = (Cat)a;
+	}
+}

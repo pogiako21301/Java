@@ -1,0 +1,37 @@
+import java.util.*;
+
+class Quadrilateral { // Superclass (parent)
+  public void showDescription() {
+    System.out.println("- is quadrilateral");
+  }
+}
+class Rectangle extends Quadrilateral {
+  public void showDescription() {
+    System.out.println("- has 4 right angles");
+    super.showDescription();
+  }
+}
+class Square extends Rectangle {
+  public void showDescription() {
+    System.out.println("- has 4 equal sides");
+    super.showDescription();
+  }
+}
+public class RunQuad {
+  public static void main(String args[]) {
+    Quadrilateral Qua = new Quadrilateral();
+    Rectangle Rec = new Rectangle();
+    Square Squa = new Square();
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Press R for Rectangle or S for Square. ");
+    String word = scan.nextLine();
+        if(word.equalsIgnoreCase("R")) {
+            System.out.println("a rectangle");
+            Rec.showDescription();
+        }
+        else if(word.equalsIgnoreCase("S")){
+            System.out.println("a square");
+            Squa.showDescription();
+        }
+    }
+}

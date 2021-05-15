@@ -1,0 +1,33 @@
+import java.util.*; 
+
+    public class Main{  
+        public static void main(String args[]){  
+            HashMap<String,String> student = new HashMap<String,String>();  
+            Scanner sc = new Scanner(System.in);
+            String stnm = "";
+            String fn = "";
+            for(int i = 1; i <= 3; i++){
+                System.out.print("Enter student number " + i + ": ");
+                stnm = sc.nextLine();
+                System.out.print("Enter first name " + i + ": ");
+                fn = sc.nextLine();
+                student.put(stnm, fn);
+            }  
+               
+            System.out.println("Student List:");  
+            for(Map.Entry m : student.entrySet()){    
+            System.out.println(m.getKey() + " " + m.getValue());
+            
+        }
+        student.remove(stnm, fn);
+        System.out.print("Enter student number 3: ");
+        stnm = sc.nextLine();
+        System.out.print("Enter first name 3: ");
+        fn = sc.nextLine();
+        student.put(stnm, fn);
+        
+        for(Map.Entry m : student.entrySet()){    
+            System.out.println(m.getKey() + " " + m.getValue());
+        }
+    }  
+}

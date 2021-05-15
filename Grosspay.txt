@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    String empName;
+	    double grosspay = 0;
+	    double wHoldingtax = 0.15;
+	    double SSS = 0.0363;
+	    double medicare = 0.0125;
+	    double pagibig = 100;
+	    
+	    
+	    Scanner scan = new Scanner(System.in);
+	    System.out.print("Enter your name: ");
+	    empName = scan.nextLine();
+		System.out.print("Enter gross pay: ");
+		grosspay = scan.nextDouble();
+		
+		System.out.println("__________________________________");
+	    System.out.println("Deduction                   Amount");
+	    double tax = grosspay * wHoldingtax;
+	    System.out.println("Witholding Tax:             " + tax);
+	    double SScont = grosspay * SSS;
+	    System.out.println("SSS contribution:           " + SScont);
+	    double medi = grosspay * medicare;
+	    System.out.println("Medicare:                   " + medi);
+	    System.out.println("Pag ibig contribution:      " + pagibig);
+	    System.out.println("__________________________________");
+	    double net = grosspay - tax - SScont - medi - pagibig;
+	    System.out.println("Net pay:                    " + net);
+		
+	}
+}

@@ -1,0 +1,73 @@
+import java.util.*;
+
+class Quadrilateral { // Superclass (parent)
+  public void showDescription() {
+    System.out.println("- is quadrilateral");
+  }
+}
+class Rectangle extends Quadrilateral {
+  public void showDescription() {
+    System.out.println("- has 4 right angles");
+    super.showDescription();
+  }
+}
+class Square extends Rectangle {
+  public void showDescription() {
+    System.out.println("- has 4 equal sides");
+    super.showDescription();
+  }
+}
+class Parallelogram extends Quadrilateral {
+  public void showDescription() {
+    System.out.println("- has 2 pairs of parallel sides");
+    super.showDescription();
+  }
+}
+class Rhombus extends Parallelogram {
+  public void showDescription() {
+    System.out.println("- has 4 congruent sides");
+    super.showDescription();
+  }
+}
+class Trapezoid extends Quadrilateral {
+  public void showDescription() {
+    System.out.println("- has 1 pair of parallel sides");
+    super.showDescription();
+  }
+}
+public class RunQuad {
+  public static void main(String args[]) {
+    Quadrilateral Qua = new Quadrilateral();
+    Rectangle Rec = new Rectangle();
+    Square Squa = new Square();
+    Parallelogram Par = new Parallelogram();
+    Rhombus Rhom = new Rhombus();
+    Trapezoid Tra = new Trapezoid();
+    Scanner scan = new Scanner(System.in);
+    System.out.println("R - Rectangle \nS -Square\np - Parallelogram \nH - Rhombus \nT - Trapezoid");
+    String word = scan.nextLine();
+        if(word.equalsIgnoreCase("R")) {
+            System.out.println("a rectangle");
+            Rec.showDescription();
+        }
+        else if(word.equalsIgnoreCase("S")){
+            System.out.println("a square");
+            Squa.showDescription();
+        }
+        else if(word.equalsIgnoreCase("P")){
+            System.out.println("a parallelogram");
+            Par.showDescription();
+        }
+        else if(word.equalsIgnoreCase("H")){
+            System.out.println("a rhombus");
+            Rhom.showDescription();
+        }
+        else if(word.equalsIgnoreCase("T")){
+            System.out.println("a trapezoid");
+            Tra.showDescription();
+        }
+        else {
+            System.out.println("Error has been occured");
+        }
+    }
+}

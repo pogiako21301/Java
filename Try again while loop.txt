@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        while (true) {
+            System.out.print("1 - Positive / Negative\n2 - Big / Small\n3 - Odd / Even\n4 - Consonant / Vowel\n9 - Exit\nChoose your Calculator: ");
+        	String input = scanner.next();
+        	
+        	if(input.equals("1")) {
+        		System.out.print("Enter the number you want to check: ");
+        		int num = scanner.nextInt();
+        		if(num > 0) {
+                    System.out.println(num + " is positive number");
+                }
+                else if(num < 0) {
+                    System.out.println(num + " is negative number");
+                }
+                else {
+                    System.out.println(num + " is neither positive nor negative");
+                }
+        	}
+        	
+        	if(input.equals("2")) {
+        		System.out.print("Enter first number: ");
+                int num1 = scanner.nextInt();
+                System.out.print("Enter second number: ");
+                int num2 = scanner.nextInt();
+                if(num1 > num2) {
+                System.out.println(num1 + " is bigger than " + num2);
+                }
+                else if(num1 < num2) {
+                    System.out.println(num1 + " is smaller than " + num2);
+                }
+                else {
+                    System.out.println(num1 + " is equal to " + num2);
+                }
+        	}
+        	
+        	if(input.equals("3")) {
+        		System.out.print("Enter a number: ");
+                int num = scanner.nextInt();
+                if(num % 2 == 0) {
+                   System.out.println(num + " is even"); 
+                }
+                else {
+                   System.out.println(num + " is odd"); 
+                }
+        	}
+        	
+        	if(input.equals("4")) {
+        		System.out.print("Enter a character: ");
+        		char alpha = scanner.next().charAt(0);
+        		
+        		if(alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha =='u' || alpha == 'A' || alpha == 'E' || alpha == 'I' || alpha == 'O' || alpha == 'U') {
+    	            System.out.println("Entered character " + alpha + " is Vowel"); 
+    	        }
+    	        else if((alpha >= 'a' && alpha <= 'z')||(alpha >= 'A' && alpha <= 'Z')){
+    	            System.out.println("Entered character " + alpha + " is Consonant");
+    	        }
+    	        else {
+    	            System.out.println("Not an alphabet");
+    	        }
+        	}
+        	
+        	if(input.equals("9")) {
+            	    System.out.println("Thank you!");
+            	    System.out.println("Exiting Program...");
+            	    System.out.println("Dhana Bermudez");
+            		System.exit(1);
+            }
+            
+            
+            System.out.print("Enter 0 to continue: ");
+            
+            int tryAgain = scanner.nextInt();
+            if (tryAgain == 0) {
+                continue;
+            } else {
+                break;
+            }
+        }
+    }
+}

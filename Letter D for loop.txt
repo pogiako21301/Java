@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+	    Scanner reader = new Scanner(System.in);
+	    System.out.print("Please give me a character that will follow your display: ");
+	    char c = reader.next().charAt(0);
+        for ( int row = 0; row < 7; row ++) {
+            for (int col= 0; col < 9; col ++) {
+                if(row == 0 || row == 6) {
+                    System.out.print(c);
+                }
+                else {
+                if(col == 0) {
+                    System.out.print(c);
+                }
+                if(col == 8){
+                   System.out.print(c); 
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+        }
+            System.out.println("");
+
+}
+	}
+}

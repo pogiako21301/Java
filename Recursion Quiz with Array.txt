@@ -1,0 +1,87 @@
+import java.util.*;
+public class Main {
+    static int count = 0; 
+    static void first() {
+        Scanner scan = new Scanner(System.in);
+        String[] alphabet = new String[]{"[A]Kushina", "[B]Jiraiya", "[C]Minato"};
+        List<String> list = Arrays.asList(alphabet);
+        System.out.println("Who is Naruto's father? ");
+        System.out.print("[A]Kushina \n[B]Jiraiya \n[C]Minato \nAnswer: ");
+        String choice = scan.nextLine();
+        if(choice.contains("C") || (choice.contains("c"))) {
+            System.out.println("Correct!");
+            count++;
+        }
+        else {
+            System.out.println("Wrong!");
+        }
+    }
+    static void second() {
+        Scanner scan = new Scanner(System.in);
+        String[] alphabet = new String[]{"[A]Sasuke", "[B]Shikamaru", "[C]Sakura"};
+        List<String> list = Arrays.asList(alphabet);
+        System.out.println("Who is Naruto's bestfriend? ");
+        System.out.print("[A]Sasuke \n[B]Shikamaru  \n[C]Sakura \nAnswer: ");
+        String choice = scan.nextLine();
+        if(choice.contains("B") || (choice.contains("b"))) {
+            System.out.println("Correct!");
+            count++;
+        }
+        else {
+            System.out.println("Wrong!");
+        }
+    }
+    static void third() {
+        Scanner scan = new Scanner(System.in);
+        String[] alphabet = new String[]{"[A]Sasuke", "[B]Naruto", "[C]Kakashi"};
+        List<String> list = Arrays.asList(alphabet);
+        System.out.println("Who is Gaara's first friend? ");
+        System.out.print("[A]Sasuke \n[B]Naruto \n[C]Kakashi \nAnswer: ");
+        String choice = scan.nextLine();
+        if(choice.contains("B") || (choice.contains("b"))) {
+            System.out.println("Correct!");
+            count++;
+        }
+        else {
+            System.out.println("Wrong!");
+        }
+    }
+    static void fourth() {
+        Scanner scan = new Scanner(System.in);
+        String[] alphabet = new String[]{"[A]Hinata", "[B]Tenten", "[C]Sakura"};
+        List<String> list = Arrays.asList(alphabet);
+        System.out.println("Who is Naruto's wife? ");
+        System.out.print("[A]Hinata \n[B]Tenten \n[C]Sakura \nAnswer: ");
+        String choice = scan.nextLine();
+        if(choice.contains("A") || (choice.contains("a"))) {
+            System.out.println("Correct!");
+            count++;
+        }
+        else {
+            System.out.println("Wrong!");
+        }
+    }
+    static void fifth() {
+        Scanner scan = new Scanner(System.in);
+        String[] alphabet = new String[]{"[A]Tsunade", "[B]Jiraiya", "[C]Minato"};
+        List<String> list = Arrays.asList(alphabet);
+        System.out.println("Who is the fifth hokage in Naruto? ");
+        System.out.print("[A]Tsunade  \n[B]Jiraiya \n[C]Minato \nAnswer: ");
+        String choice = scan.nextLine();
+        if(choice.contains("A") || (choice.contains("a"))) {
+            System.out.println("Correct!");
+            count++;
+        }
+        else {
+            System.out.println("Wrong!");
+        }
+    }
+    public static void main(String[] args) {
+        first();
+        second();
+        third();
+        fourth();
+        fifth();
+        System.out.println("Score: " + count + "/5");
+    }
+}

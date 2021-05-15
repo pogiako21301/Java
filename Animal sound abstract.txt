@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+abstract class Animal {
+    abstract void eat();
+    abstract void sleep();
+    abstract void makeSound();
+  }
+
+class Bird extends Animal {
+    public void eat(){
+        System.out.print("Birds love to eat seeds and ");
+    }
+    public void sleep() {
+        System.out.println("sleep for 10 - 12 hours a day.");
+    }
+    public void makeSound() {
+        System.out.println("Tweet tweet");
+  }
+    
+}
+
+class Cat extends Bird{
+    public void eat(){
+        System.out.print("Cats love to eat fish and ");
+    }
+    public void sleep() {
+        System.out.println("sleep for 12 hours a day.");
+    }
+    public void makeSound(){
+        System.out.println("Meow moew");
+    }
+    
+}
+class Dog extends Cat{
+    public void eat(){
+        System.out.print("Dogs love to eat fish and ");
+    }
+    public void sleep() {
+        System.out.println("sleep for 3 hours a day.");
+    }
+    public void makeSound(){
+        System.out.println("Bark bark");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    
+    System.out.print("Choose an animal. Press B for Bird, Press C for Cat, Press D for Dog: ");
+    String str = sc.nextLine();
+    if(str.equalsIgnoreCase("B")){
+        Bird b1 = new Bird();
+        b1.eat();
+        b1.sleep();
+        b1.makeSound();
+    }
+    else if(str.equalsIgnoreCase("C")){
+        Cat c1 = new Cat();
+        c1.eat();
+        c1.sleep();
+        c1.makeSound();
+    }
+    else if(str.equalsIgnoreCase("D")){
+        Dog d1 = new Dog();
+        d1.eat();
+        d1.sleep();
+        d1.makeSound();
+        
+        }
+    }
+}

@@ -1,0 +1,15 @@
+public class Main{
+  static void myStatic() {
+    System.out.println("I just got executed!");
+  }
+  public void myPublic(){
+      System.out.println("Pogi ni garry");
+  }
+
+  public static void main(String[] args) {
+    myStatic();
+
+    Main object = new Main();
+    object.myPublic();
+  }
+}

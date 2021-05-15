@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.Iterator;
+public class Main {
+ 
+    public static void main(String[] args) {
+        LinkedList<String> linkedlist = new LinkedList<String>();
+        LinkedList<String> linkedlist2 = new LinkedList<String>();
+     
+        linkedlist.add("We Belong Together");
+        linkedlist.add("Million Reasons");
+        linkedlist.add("The Climb");
+        linkedlist.add("Who You Are");
+        linkedlist.add("A Woman's Worth");
+        System.out.println(linkedlist);
+     
+        linkedlist2.add("Mariah Carey");
+        linkedlist2.add("Lady Gaga");
+        linkedlist2.add("Miley Cyrus");
+        linkedlist2.add("Jessie J");
+        linkedlist2.add("Alicia Keys");
+        System.out.println(linkedlist2);
+        
+        Iterator it = linkedlist.iterator();
+        
+        while(it.hasNext()){
+            for(String Artist : linkedlist2)
+                System.out.println(it.next() + " - " + Artist);
+        }
+    }
+}

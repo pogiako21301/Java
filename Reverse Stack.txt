@@ -1,0 +1,41 @@
+import java.util.Stack; 
+import java.util.Scanner;
+
+public class Main { 
+    public static void main(String[] args){ 
+        Stack<String> books = new Stack<>();
+        Scanner sc = new Scanner(System.in);
+        String str = "";
+        System.out.println("Enter four books titles.");
+        for(int i = 1; i <= 4; i++){
+            System.out.print("Book " + i + ": ");
+            str = sc.nextLine();
+            books.push(str);
+        }
+        System.out.println("New order of books:");
+        reverseStack(books); 
+        for (int i = 0, n = books.size(); i < n; i++){
+            books.elementAt(i); 
+        }
+        System.out.println(books);
+    } 
+    public static <T> void reverseStack(Stack<T> books){ 
+        if (books.isEmpty()) { 
+            return; 
+        } 
+        T bottom = popBottom(books); 
+        reverseStack(books); 
+        books.push(bottom); 
+    } 
+    private static <E> E popBottom(Stack<E> books){ 
+        E top = books.pop(); 
+        if (books.isEmpty()) {
+            return top; 
+        } 
+        else {
+            E bottom = popBottom(books); 
+            books.push(top); 
+            return bottom; 
+        } 
+    } 
+} 

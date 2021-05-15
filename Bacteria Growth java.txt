@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.text.NumberFormat;
+
+public class Main {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		int bacteria = 0;
+		int hours = 0;
+		try {
+			System.out.print("Enter initial count of bacteria: ");
+			bacteria = scan.nextInt();
+
+			System.out.print("Enter the number of hours: ");
+			hours = scan.nextInt();
+		}
+		catch(Exception xy) {
+            System.out.print(xy.getMessage());
+		}
+	    System.out.println("The number bacteria per hour will be: ");
+	    calculate(bacteria, hours);
+	}
+	public static void calculate(int bacteria, int hours) {
+		Thread threading = new Thread();
+		threading.start();
+		NumberFormat form = NumberFormat.getInstance();
+		form.setGroupingUsed(true);
+		
+		for (int number = 1; number <= bacteria; number++){
+			try {
+				threading.sleep(2000);
+			}
+			catch(InterruptedException a) {
+				System.out.println (a.getMessage());
+			}
+			int x =(int)Math.pow(hours, 6);
+		    int totaltime = number * x;
+		    int time = totaltime / 2;
+		    int currenttime = time + time;
+			System.out.println("Hour " + number + ": " + form.format(currenttime));
+		}
+	}
+}

@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner reader = new Scanner(System.in);
+	    System.out.print("Enter any key: ");
+		String revWord = reader.nextLine();
+        System.out.print("Reverse Word: ");
+            for (String part:revWord.split(" ")) {
+                System.out.print(new StringBuilder(part).reverse().toString());
+                System.out.print(" ");
+            } 
+	}
+}

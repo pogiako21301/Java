@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+abstract class EmployeeList {
+    abstract void ShowEmployeeID();
+    abstract void EmployeeStatus();
+  }
+class Records extends EmployeeList {
+    public void ShowEmployeeID(){
+        System.out.println("ID: Garry Gajultos ");
+    }
+    public void EmployeeStatus() {
+        System.out.println("Status: Active");
+    }
+}
+public class Abstract {
+    public static void main(String[] args) {
+        Records r1 = new Records();
+        r1.ShowEmployeeID();
+        r1.EmployeeStatus();
+    }
+}

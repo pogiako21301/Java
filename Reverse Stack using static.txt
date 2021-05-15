@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Meynn {
+    static Stack<String> books = new Stack<>();
+    static void btmPop(String x) {
+        if(books.isEmpty())
+            books.push(x);
+        else{
+            String a = books.peek();
+            books.pop();
+            btmPop(x);
+            books.push(a);
+        }
+    }
+    static void reverse() {
+        if(books.size() > 0) {
+            String x = books.peek();
+            books.pop();
+            reverse();
+	    btmPop(x);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter four books titles.");
+        for(int i = 1; i <= 4; i++){
+            System.out.print("Book " + i + ": ");
+            String str = sc.nextLine();
+            books.push(str);
+        }
+        System.out.println("New order of books:");
+        reverse();
+        System.out.println(books);
+    }
+}

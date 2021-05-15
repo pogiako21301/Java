@@ -1,0 +1,13 @@
+public class Main {
+    public String message() {
+        return "Method";
+    }
+}
+class Childclass extends Main {
+    public String message() {
+        return super.message() + " Overriding";
+    }
+    public static void main(String[] args) {
+    	System.out.println(new Childclass().message());
+	}
+}

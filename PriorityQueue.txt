@@ -1,0 +1,29 @@
+import java.util.*; 
+
+public class Main {
+    public static void main(String[] args) {
+        PriorityQueue<String> nNames = new PriorityQueue<>();
+        String str = "";
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the nickname of 4 of your classmate: ");
+        
+        for(int i = 1; i <= 4; i++){
+            str = sc.next();
+            nNames.add(str);
+        }
+        
+        System.out.print("Press H to say Hi to each of them. ");
+        
+        
+        if (nNames != null) {
+            Object[] arr = nNames.toArray();
+            for (int x = 0; x < 4; x++) {
+	           	str = sc.next();
+	           	System.out.println("Hi " + nNames.remove());
+           	}
+           	str = sc.next();
+           	System.out.print("Done saying hi.");
+        }
+    }
+}
